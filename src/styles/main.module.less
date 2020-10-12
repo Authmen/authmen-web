@@ -1,0 +1,112 @@
+@import './reset.css';
+@import './normalize.css';
+@import './Lato/lato.css';
+
+#app {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #505050;
+    -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+}
+
+@mobile-margin:16px;
+
+/** ------ common ------ **/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom:1;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.center-area-mixin(@max-width:960px){
+  max-width: @max-width + @mobile-margin*2;
+  padding: 0 @mobile-margin;
+  margin: 0 auto;
+}
+
+.center-area{
+    .center-area-mixin(960px);
+}
+.center-area-1228{
+    .center-area-mixin(1228px);
+}
+
+.title-decorated{
+    font-size: 20px;
+    font-family: Lato-Black, Lato;
+    font-weight: 900;
+    color: #1D1D1D;
+    line-height: 24px;
+    margin-bottom: 18px;
+    // font-size:20px;
+    // font-family:Lato;
+    // font-weight:900;
+    // color:rgba(29,29,29,1);
+    // line-height:24px;
+    // margin-bottom: 40px;
+    // text-align: center;
+    // position: relative;
+    // display: inline-block;
+    // &::before{
+    //     content: "";
+    //     position: absolute;
+    //     width: 0;
+    //     height: 0;
+    //     left: -24px;
+    //     top: 7px;
+    //     border-right: 6px solid #F00000;
+    //     border-bottom: 6px solid #F00000;
+    //     border-left: 6px solid transparent;
+    //     border-top: 6px solid transparent;
+    // }
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 0;
+    //     height: 0;
+    //     top: 7px;
+    //     right: -24px;
+    //     border-top: 6px solid #F00000;
+    //     border-left: 6px solid #F00000;
+    //     border-bottom: 6px solid transparent;
+    //     border-right: 6px solid transparent;
+    // }
+}
+
+.visible-pc{
+    display: block;
+}
+.visible-mobile{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    .visible-pc{
+        // display: none!important;
+    }
+    .visible-mobile{
+        // display: block!important;
+    }
+}
